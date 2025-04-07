@@ -1,41 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple nodejs app</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wiki Flower Search 🌸</title>
 
-<style>
-.button {
-  background-color: #04AA6D; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+    }
 
-.button2 {background-color: #008CBA;} /* Blue */
-.button3 {background-color: #f44336;} /* Red */ 
-.button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
-.button5 {background-color: #555555;} /* Black */
-</style>
+    body {
+      background: linear-gradient(to right, #fff1f2, #fce4ec);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
 
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 500px;
+    }
+
+    .flower {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #e91e63;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      padding: 12px;
+      width: 80%;
+      border: 2px solid #e91e63;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      padding: 12px 25px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #d81b60;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      margin: 5px;
+      font-size: 14px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .green { background-color: #4caf50; }
+    .blue { background-color: #2196f3; }
+    .red { background-color: #f44336; }
+    .gray { background-color: #e0e0e0; color: black; }
+    .black { background-color: #333; }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <img src="/images/flower.png" alt="Flower" class="flower"/>
+    <h1>🌼 Wiki Flower Search 🌼</h1>
+
     <form action="/index" method="GET">
-        <input type="text" name = "person" placeholder="Person's name...">
-        <input type="submit" value="Search">
+      <input type="text" name="person" placeholder="Enter a famous person..." required />
+      <br/>
+      <input type="submit" value="Search 🌸" />
     </form>
 
-    <button class="button">Green</button>
-    <button class="button button2">Blue</button>
-    <button class="button button3">Red</button>
-    <button class="button button4">Gray</button>
-    <button class="button button5">Black</button>
+    <div class="buttons">
+      <button class="button green">Green</button>
+      <button class="button blue">Blue</button>
+      <button class="button red">Red</button>
+      <button class="button gray">Gray</button>
+      <button class="button black">Black</button>
+    </div>
+  </div>
 </body>
 </html>
